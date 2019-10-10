@@ -28,3 +28,8 @@ legend {
 .mainBox > p {
     padding-bottom: 20px;
 }
+
+#startBtn{
+    width: 150px;
+    height: 50px;
+}
