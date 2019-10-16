@@ -1,6 +1,25 @@
 'use strict';
+//Quiz DATA
+ const DATA = {
+     //quiz variables
+    score: 0,
+    current: 0,
 
- const QUESTIONS = [
+    //result comments
+    perfect: "Wow you sure know your games! Maybe go outside a little",
+    good: "Awesome! thanks for trying!",
+    veryBad: "Wow even people in the mountains know a thing or two about video games, maybe play a litte",
+
+    //result sources
+    correctCmnt: "Nice you got it right!",
+    correct:"https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif" ,
+    correctAlt:"president saying correct",
+    wrongCmnt: "OOPS! you got it wrong",
+    wrong: "https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif",
+    wrongAlt: "president saying wrong",
+
+    //Questions Array
+    questions: [
     {
         img: "Images/cloud.jpg" ,
         alt: "A man with yellow hair and blue clothing",
@@ -34,7 +53,7 @@
         choices: 
         [
             "Zavala",
-            "Master Chief",
+            "MasterChief",
             "Megaman",
             "Robocop"
         ],
@@ -61,9 +80,9 @@
         [
             "Clint Eastwood",
             "Accel",
-            "Sheriff Bandido",
+            "SheriffBandido",
             "Arthur Morgan"
         ],
-        answer: "Sheriff Bandido"
-    },
-]
+        answer: "SheriffBandido"
+    }]
+ }
