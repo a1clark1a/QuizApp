@@ -69,14 +69,19 @@ html{
         text-align: left;
     }
 
+
     .radioContainer > label {
-        padding: 10px;
+        display: block;
     }
 
     button {
         margin-top: 10px;
         width: 100px;
         height: 50px;
+    }
+
+    button:hover, input:hover, label:hover{
+        cursor: pointer;
     }
 
 }

@@ -35,8 +35,8 @@ function renderQuiz()
     for(let i=0; i < currentQuestionObj.choices.length; i++)
     {
         $('.radioContainer').append(`
-        <input name="choices" id="choices${i+1}" tabdindex= "${i+1}" type="radio" value= ${currentQuestionObj.choices[i]}>
-        <label>${currentQuestionObj.choices[i]}</label><br>`)
+        <label><input name="choices" id="choices${i+1}" tabdindex= "${i+1}" type="radio" value= ${currentQuestionObj.choices[i]}>
+        ${currentQuestionObj.choices[i]}</label>`)
     }
     
 }
@@ -114,12 +114,17 @@ function checkAnswer()
 // and a string for the right comment
 function renderOutputPage(className, imgSrc, altSrc, comment)
 {
+    let crctAns = ''
+    if(className === "wrongRender")
+    {
+        crctAns = `The correct answer is ${DATA.questions[DATA.current].answer}.`;
+    }
     //first remove the quiz box
     $('.quiz').remove();
     //create the html tag to render the Output page using the passed in parameter variables
     $('.mainSection').append(`<div class="mainBox ${className}">
     <img src=${imgSrc} class="imgOutput" alt=${altSrc}>
-    <p>${comment}</p>
+    <p>${comment}!<legend>${crctAns}<legend></p>
     <button type="button" id="nxtBtn">Next Question</button>
     </div>`)
     //unbind the buttons
